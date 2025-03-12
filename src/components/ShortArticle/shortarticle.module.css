@@ -1,0 +1,25 @@
+.sports {
+    padding: 16px;
+}
+
+.sports img {
+
+    width: 100%;
+    height: auto;
+}
+
+.sports h3 {
+    margin: 8px;
+    cursor: pointer;
+}
+
+.sports p {
+    margin: 8px;
+}
+
+@media screen and (max-width : 768px) {
+    .sports {
+        flex-wrap: wrap;
+        flex: 1 0 35%;
+    }
+}

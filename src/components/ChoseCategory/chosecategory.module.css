@@ -1,0 +1,27 @@
+.category {
+    margin: 16px 48px;
+    padding: 8px;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.category h2 {
+    font-size: 2rem;
+    text-decoration: underline;
+}
+
+.category img {
+    width: 40%;
+    height: auto;
+}
+
+.category h4 {
+    font-size: 1.4rem;
+}
+
+.category p {
+    font-size: 1rem;
+    margin: 8px;
+    text-align: left;
+}

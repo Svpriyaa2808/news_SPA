@@ -1,0 +1,36 @@
+.nav {
+    margin: 0;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+}
+
+.link_items{
+    display: flex;
+    justify-content: space-around;
+}
+
+.hamburger {
+    margin: 8px;
+    padding: 8px;
+    color: white;
+    display: none;
+}
+
+@media  screen and (max-width: 600px) {
+
+    .hamburger {
+        display: block;
+    }
+    
+   .hamburger_links {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .link_items {
+        display: none;
+    }
+
+    
+}

@@ -1,0 +1,13 @@
+
+
+.links {
+    margin: 8px;
+    padding: 8px;
+    text-decoration: none;
+    color: white;
+    text-transform: capitalize;
+    align-content: center;
+    cursor: pointer;
+}
+
+

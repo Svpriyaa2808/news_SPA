@@ -1,0 +1,38 @@
+.category {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.categoryTitle {
+    margin: 8px;
+    flex: 0 0 99%;
+}
+
+.category .article {
+    flex: 0 0 30%;
+    padding: 8px;
+    margin: 8px;
+}
+
+@media screen and (max-width:768px) {
+    .category {
+        border-bottom: 2px solid gray;
+    }
+}
+
+@media screen and (max-width : 600px) {
+    .category {
+        display: block;
+        
+    }
+
+    .category .article {
+        padding: 8px;
+        margin: 8px;
+    }
+
+    .article p {
+        display: none;
+    }
+    
+}

@@ -1,0 +1,26 @@
+.recent {
+    margin: 8px;
+    padding: 8px;
+    border-bottom: 2px solid gray;
+}
+
+.recent h3 {
+    cursor: pointer;
+}
+
+.category {
+    margin: 8px 0;
+   
+}
+
+.category span {
+    font-weight: bold;
+}
+
+@media  screen and (max-width:768px) {
+    .recent {
+        flex-wrap: wrap;
+        flex: 1 0 35%;
+        border : 2px solid gray
+    }
+}

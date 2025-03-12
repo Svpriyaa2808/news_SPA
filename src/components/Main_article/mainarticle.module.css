@@ -1,0 +1,21 @@
+.main_article {
+    flex: 0 0 50%;
+    margin: 8px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: 2px solid black;
+    padding: 16px;
+}
+
+.main_article img{
+    width: 100%;
+    height: auto;
+}
+
+.main_article h2{
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.category span {
+    font-weight: 700;
+}
