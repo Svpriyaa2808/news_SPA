@@ -4,7 +4,7 @@ const Links = ({title,onClick}) => {
 
     return (
        
-        <a className={styles.links} onClick={onClick}>{title}</a>
+        <a className={styles.links} onClick={onClick} >{title}</a>
       
     )
 }

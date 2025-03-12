@@ -9,6 +9,7 @@
 .category h2 {
     font-size: 2rem;
     text-decoration: underline;
+    cursor: pointer;
 }
 
 .category img {

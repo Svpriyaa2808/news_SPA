@@ -22,7 +22,7 @@ function App() {
 
      
      {SelectedCategory !== null && !SelectedArticle && 
-     <ChoseCategory displayCategory={categoryArray.filter((category => category.category === SelectedCategory))}/> 
+     <ChoseCategory displayCategory={categoryArray.filter((category => category.category === SelectedCategory))} clickedarticle={SetSelectedArticle}/> 
      } 
     
     {!SelectedCategory  && !SelectedArticle &&
