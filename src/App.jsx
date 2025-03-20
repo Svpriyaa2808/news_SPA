@@ -5,48 +5,42 @@ import Featured from "./components/Featured"
 import Category from './components/Category'
 import ChoseCategory from "./components/ChoseCategory"
 import Footer from "./components/Footer"
-import { SportsArray,SwedenArray,EntertainmentArray,Crimerray,WorldArray } from "./data/data"
+import { SportsArray,SwedenArray,EntertainmentArray,Crimerray,WorldArray,categoryArticles } from "./data/data"
 import { categoryArray } from "./data/data"
 import DisplayArticle from "./components/DisplayArticle"
 
 function App() {
   const[SelectedCategory,SetSelectedCategory] = useState(null);
   const[SelectedArticle,SetSelectedArticle] = useState(null)
+
+  const UpdateArticle = (item) => {
+    SetSelectedArticle(item); //we can declare a function here and we can pass it to the children instead of passing variable and declaring fun later.
+  }
+  
   console.log(SelectedArticle)
   return (
     <>
      <Header />
-     <Navigation clickedCategory={SetSelectedCategory} clickedarticle={SetSelectedArticle}/>
+     <Navigation clickedCategory={SetSelectedCategory} clickedarticle={UpdateArticle}/>
 
-   
-
-     
      {SelectedCategory !== null && !SelectedArticle && 
-     <ChoseCategory displayCategory={categoryArray.filter((category => category.category === SelectedCategory))} clickedarticle={SetSelectedArticle}/> 
+     <ChoseCategory displayCategory={categoryArticles(SelectedCategory)} clickedarticle={UpdateArticle}/> 
      } 
     
     {!SelectedCategory  && !SelectedArticle &&
       <>
-      <Featured clickedarticle={SetSelectedArticle}/>
-      <Category title="Sports" categoryArray={SportsArray} clickedarticle={SetSelectedArticle}/>
-      <Category title="Sweden" categoryArray={SwedenArray} clickedarticle={SetSelectedArticle}/>
-      <Category title="Entertainment" categoryArray={EntertainmentArray} clickedarticle={SetSelectedArticle}/>
-      <Category title="Crime" categoryArray={Crimerray} clickedarticle={SetSelectedArticle}/>
-      <Category title="World" categoryArray={WorldArray} clickedarticle={SetSelectedArticle}/>
+      <Featured clickedarticle={UpdateArticle}/>
+      <Category title="Sports" categoryArray={SportsArray} clickedarticle={UpdateArticle}/>
+      <Category title="Sweden" categoryArray={SwedenArray} clickedarticle={UpdateArticle}/>
+      <Category title="Entertainment" categoryArray={EntertainmentArray} clickedarticle={UpdateArticle}/>
+      <Category title="Crime" categoryArray={Crimerray} clickedarticle={UpdateArticle}/>
+      <Category title="World" categoryArray={WorldArray} clickedarticle={UpdateArticle}/>
      </>}
 
-     {/* {SelectedArticle &&  
-     
-     <DisplayArticle displayArticle={articles.filter((item => item === SelectedArticle))}/>}
-       */}
+      {SelectedArticle && 
+        <DisplayArticle displayArticle={SelectedArticle} />
+      }
 
-{SelectedArticle && 
-    // <DisplayArticle displayArticle={articles.filter((item => item === SelectedArticle))} />
-    <DisplayArticle displayArticle={SelectedArticle} />
-
-}
-
-  
      <Footer />
     </>
   )

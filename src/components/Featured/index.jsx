@@ -14,18 +14,17 @@ const Featured = ({clickedarticle}) => {
             
             <div className={styles.left}>
             <h4>Recent News</h4>
-            {RecentArticle.map((item,index)=> <Recent key= {index} article={item} onClick={() => clickedarticle(item)}/>)}
+            {RecentArticle.map((item,index)=> <Recent key= {index} article={item} setstate={clickedarticle}/>)}
             </div>
             {/* <Main_article article={featuredArticle} selectArticle = {clickedarticle} /> */}
             <div className={styles.center}>
             <h4>Main article</h4>
-            {/* <Main_article article={featuredArticle} onClick={clickedarticle}/> */}
-            {featuredArticle.map((item,index) => <Main_article key = {index} article={item} onClick={()=>clickedarticle(item)}/>)}
+            <Main_article article={featuredArticle} setstate={clickedarticle}/>
             </div>
                 
             <div className={styles.right}>
             <h4>Sports News</h4>
-            {sportsArticle.map((item,index)=> <ShortArticle key= {index} article={item} onClick={() => clickedarticle(item)}/>)}
+            {sportsArticle.map((item,index)=> <ShortArticle key= {index} article={item} setstate={clickedarticle}/>)}
             </div>
         </div>
     )

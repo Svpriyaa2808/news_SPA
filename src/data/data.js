@@ -57,7 +57,11 @@ export const EntertainmentArray = articles.filter(item => item.category === "ent
 export const categoryArray = [...SportsArray,...Crimerray,...WorldArray,...EntertainmentArray,...SwedenArray]
 export const RecentArticle = [returnArticle(WorldArray),returnArticle(EntertainmentArray),returnArticle(Crimerray),returnArticle(SwedenArray)]
 
-export const featuredArticle = [returnArticle(articles)] //display in main article area
+export const featuredArticle = returnArticle(articles) //display in main article area
 // featuredArticle.map(item => console.log(item.headline))
 console.log(featuredArticle)
 console.log(articles.length)
+
+export const categoryArticles = (categoryString) => {
+     return articles.filter((article => article.category === categoryString))
+}
